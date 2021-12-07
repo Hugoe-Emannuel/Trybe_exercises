@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p class="txt">Texto padrão do nosso site</p>
+        <p class="txt">-----</p>
+        <p class="txt">Trybe</p>
+      </section>
+    </main>
+    <script>
+        function alteraConteudo () {
+        document.querySelectorAll('.txt')[0].innerHTML ='daki a 2 anos eu me vejo'
+        document.querySelectorAll('.txt')[1].innerHTML ='como um dev bem sucedido'
+        document.querySelectorAll('.txt')[2].innerHTML ='e com dinheiro ksdksd'
+        }
+      alteraConteudo()
+
+      function alteraCor (color) {
+        document.querySelector('.main-content').style.backgroundColor = color; 
+      }
+      alteraCor('rgb(76 ,164 ,109)')
+
+      function alteraCor2 (color) {
+        document.querySelector('.main-content .center-content').style.backgroundColor = color;
+      }
+      alteraCor2('white')
+
+      function corrije () {
+        document.querySelector('.title').innerHTML = 'Exercício 5.1 - JavaScript'
+      }
+      corrije()
+
+      function modifica () {
+       
+      }
+      modifica()
+
+
+
+    </script>
+  </body>
+</html>

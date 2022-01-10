@@ -1,6 +1,7 @@
 const fs = require('fs').promises;
+const arquivo = './simpsons.json';
 
-fs.readFile('./simpsons.json', 'utf-8')
+fs.readFile(arquivo, 'utf-8')
 .then((text) => JSON.parse(text))
 .then((sp) => sp.map(({id , name}) => `${id} - ${name}`))
 .then((st) => console.log(st))
@@ -8,9 +9,10 @@ fs.readFile('./simpsons.json', 'utf-8')
 
 const getSimpson = async () => {
   const simpson = await fs
-  .readFile('./simpsons.json', 'utf-8')
+  .readFile(arquivo, 'utf-8')
   .then((text) => JSON.parse(text))
-  .then((sp) => console.log(sp));
+  .then((sp) => sp.map(({id ,name}) => `${id} - ${name}`))
+  .then((res) => console.log(res));
 }
 
 getSimpson();
